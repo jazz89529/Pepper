@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "/Users/david/pepper/pepper2/android/app/build/intermediates/res/merged/release/raw/q4.mp3",
+        "source": "/Users/david/pepper/pepper2/android/app/src/main/res/raw/q4.mp3"
+    },
+    {
+        "merged": "/Users/david/pepper/pepper2/android/app/build/intermediates/res/merged/release/raw/right2.mp3",
+        "source": "/Users/david/pepper/pepper2/android/app/src/main/res/raw/right2.mp3"
+    },
+    {
+        "merged": "/Users/david/pepper/pepper2/android/app/build/intermediates/res/merged/release/raw/a3.mp3",
+        "source": "/Users/david/pepper/pepper2/android/app/src/main/res/raw/a3.mp3"
+    },
+    {
+        "merged": "/Users/david/pepper/pepper2/android/app/build/intermediates/res/merged/release/raw/q2.mp3",
+        "source": "/Users/david/pepper/pepper2/android/app/src/main/res/raw/q2.mp3"
+    },
+    {
+        "merged": "/Users/david/pepper/pepper2/android/app/build/intermediates/res/merged/release/raw/right4.mp3",
+        "source": "/Users/david/pepper/pepper2/android/app/src/main/res/raw/right4.mp3"
+    },
+    {
+        "merged": "/Users/david/pepper/pepper2/android/app/build/intermediates/res/merged/release/raw/right1.mp3",
+        "source": "/Users/david/pepper/pepper2/android/app/src/main/res/raw/right1.mp3"
+    },
+    {
+        "merged": "/Users/david/pepper/pepper2/android/app/build/intermediates/res/merged/release/raw/a4.mp3",
+        "source": "/Users/david/pepper/pepper2/android/app/src/main/res/raw/a4.mp3"
+    },
+    {
+        "merged": "/Users/david/pepper/pepper2/android/app/build/intermediates/res/merged/release/raw/q3.mp3",
+        "source": "/Users/david/pepper/pepper2/android/app/src/main/res/raw/q3.mp3"
+    },
+    {
+        "merged": "/Users/david/pepper/pepper2/android/app/build/intermediates/res/merged/release/raw/a1.mp3",
+        "source": "/Users/david/pepper/pepper2/android/app/src/main/res/raw/a1.mp3"
+    },
+    {
+        "merged": "/Users/david/pepper/pepper2/android/app/build/intermediates/res/merged/release/raw/a2.mp3",
+        "source": "/Users/david/pepper/pepper2/android/app/src/main/res/raw/a2.mp3"
+    },
+    {
+        "merged": "/Users/david/pepper/pepper2/android/app/build/intermediates/res/merged/release/raw/wel.mp3",
+        "source": "/Users/david/pepper/pepper2/android/app/src/main/res/raw/wel.mp3"
+    },
+    {
+        "merged": "/Users/david/pepper/pepper2/android/app/build/intermediates/res/merged/release/raw/right3.mp3",
+        "source": "/Users/david/pepper/pepper2/android/app/src/main/res/raw/right3.mp3"
+    },
+    {
+        "merged": "/Users/david/pepper/pepper2/android/app/build/intermediates/res/merged/release/raw/q1.mp3",
+        "source": "/Users/david/pepper/pepper2/android/app/src/main/res/raw/q1.mp3"
+    }
+]
