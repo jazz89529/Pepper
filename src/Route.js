@@ -16,9 +16,11 @@ import A1 from './pages/game/a1'
 import A2 from './pages/game/a2'
 import A3 from './pages/game/a3'
 import A4 from './pages/game/a4'
-import Score from './pages/game/score'
-
-
+import Score0 from './pages/game/score0'
+import Score1 from './pages/game/score1'
+import Score2 from './pages/game/score2'
+import Score3 from './pages/game/score3'
+import Score4 from './pages/game/score4'
 
 export default class Routes extends Component<{}> {
 	render() {
@@ -39,8 +41,12 @@ export default class Routes extends Component<{}> {
 			      <Scene key="a1" component={A1} title="A1"/>	
 			      <Scene key="a2" component={A2} title="A2"/>
 			      <Scene key="a3" component={A3} title="A3"/>
-			      <Scene key="a4" component={A4} title="A4"/>		
-			      <Scene key="score" component={Score} title="Score"/>			      
+			      <Scene key="a4" component={A4} title="A4"/>	
+			      <Scene key="score0" component={Score0} title="Score0"/>	
+			      <Scene key="score1" component={Score1} title="Score1"/>
+			      <Scene key="score2" component={Score2} title="Score2"/>
+			      <Scene key="score3" component={Score3} title="Score3"/>
+  			      <Scene key="score4" component={Score4} title="Score4"/>			      
 			    </Stack>
 			 </Router>
 			)

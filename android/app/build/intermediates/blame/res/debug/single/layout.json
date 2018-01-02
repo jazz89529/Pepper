@@ -16,12 +16,12 @@
         "source": "/Users/david/pepper/pepper2/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/layout/abc_activity_chooser_view.xml"
     },
     {
-        "merged": "/Users/david/pepper/pepper2/android/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
-        "source": "/Users/david/pepper/pepper2/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/layout/abc_action_mode_close_item_material.xml"
-    },
-    {
         "merged": "/Users/david/pepper/pepper2/android/app/build/intermediates/res/merged/debug/layout/dev_loading_view.xml",
         "source": "/Users/david/pepper/pepper2/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.51.0/res/layout/dev_loading_view.xml"
+    },
+    {
+        "merged": "/Users/david/pepper/pepper2/android/app/build/intermediates/res/merged/debug/layout/abc_action_mode_close_item_material.xml",
+        "source": "/Users/david/pepper/pepper2/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
         "merged": "/Users/david/pepper/pepper2/android/app/build/intermediates/res/merged/debug/layout/abc_action_mode_bar.xml",

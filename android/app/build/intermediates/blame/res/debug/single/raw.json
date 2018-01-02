@@ -8,6 +8,10 @@
         "source": "/Users/david/pepper/pepper2/android/app/src/main/res/raw/q1.mp3"
     },
     {
+        "merged": "/Users/david/pepper/pepper2/android/app/build/intermediates/res/merged/debug/raw/readytomail.mp3",
+        "source": "/Users/david/pepper/pepper2/android/app/src/main/res/raw/readytomail.mp3"
+    },
+    {
         "merged": "/Users/david/pepper/pepper2/android/app/build/intermediates/res/merged/debug/raw/q4.mp3",
         "source": "/Users/david/pepper/pepper2/android/app/src/main/res/raw/q4.mp3"
     },
@@ -38,6 +42,14 @@
     {
         "merged": "/Users/david/pepper/pepper2/android/app/build/intermediates/res/merged/debug/raw/a1.mp3",
         "source": "/Users/david/pepper/pepper2/android/app/src/main/res/raw/a1.mp3"
+    },
+    {
+        "merged": "/Users/david/pepper/pepper2/android/app/build/intermediates/res/merged/debug/raw/countdown.mp3",
+        "source": "/Users/david/pepper/pepper2/android/app/src/main/res/raw/countdown.mp3"
+    },
+    {
+        "merged": "/Users/david/pepper/pepper2/android/app/build/intermediates/res/merged/debug/raw/ready.mp3",
+        "source": "/Users/david/pepper/pepper2/android/app/src/main/res/raw/ready.mp3"
     },
     {
         "merged": "/Users/david/pepper/pepper2/android/app/build/intermediates/res/merged/debug/raw/right3.mp3",

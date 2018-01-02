@@ -21,7 +21,9 @@ import SoundPlayer from 'react-native-sound';
 var song = null;
 
 export default class App extends Component<{}> {
-
+  constructor(props) {
+    super(props);
+  }
   componentWillMount() {
     this.onPressButtonPlay();
   }
@@ -44,15 +46,15 @@ export default class App extends Component<{}> {
   }
 
   ans1(){
-    Actions.a1();
+    Actions.a1({ans: 1});
   }
 
   ans2(){
-    Actions.a1();
+    Actions.a1({ans: 0});
   }
 
   ans3(){
-    Actions.a1();
+    Actions.a1({ans: 0});
   }
 
   render() {

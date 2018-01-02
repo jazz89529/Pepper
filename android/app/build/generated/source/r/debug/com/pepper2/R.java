@@ -1986,15 +1986,18 @@ containing a value of this type.
         public static final int a2=0x7f070001;
         public static final int a3=0x7f070002;
         public static final int a4=0x7f070003;
-        public static final int q1=0x7f070004;
-        public static final int q2=0x7f070005;
-        public static final int q3=0x7f070006;
-        public static final int q4=0x7f070007;
-        public static final int right1=0x7f070008;
-        public static final int right2=0x7f070009;
-        public static final int right3=0x7f07000a;
-        public static final int right4=0x7f07000b;
-        public static final int wel=0x7f07000c;
+        public static final int countdown=0x7f070004;
+        public static final int q1=0x7f070005;
+        public static final int q2=0x7f070006;
+        public static final int q3=0x7f070007;
+        public static final int q4=0x7f070008;
+        public static final int ready=0x7f070009;
+        public static final int readytomail=0x7f07000a;
+        public static final int right1=0x7f07000b;
+        public static final int right2=0x7f07000c;
+        public static final int right3=0x7f07000d;
+        public static final int right4=0x7f07000e;
+        public static final int wel=0x7f07000f;
     }
     public static final class string {
         public static final int abc_action_bar_home_description=0x7f080000;

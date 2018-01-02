@@ -11,6 +11,7 @@ import {
   StatusBar 
 } from 'react-native';
 
+
 import Routes from './src/Route';
 
 export default class App extends Component<{}> {

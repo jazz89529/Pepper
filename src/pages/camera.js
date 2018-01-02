@@ -17,6 +17,10 @@ import {
 import Camera from 'react-native-camera';
 import Mailer from 'react-native-mail';
 import {Actions} from 'react-native-router-flux';
+import CountdownCircle from 'react-native-countdown-circle';
+import SoundPlayer from 'react-native-sound';
+
+var song = null;
 
 export default class App extends Component<{}> {
   constructor(props) {
@@ -24,12 +28,79 @@ export default class App extends Component<{}> {
 
     this.state = {
       path: null,
+      takePicIsNull: null
     };
   }
+
+  componentWillMount(){
+    this.playReady();
+  }
+
+  playReady() {
+    song = new SoundPlayer('ready.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if(error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+      else {
+        song.play((success) => {
+          if(!success)
+            ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
+        });
+      }
+    });
+  }
+  playReadyToMail() {
+    song = new SoundPlayer('readytomail.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if(error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+      else {
+        song.play((success) => {
+          if(!success)
+            ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
+        });
+      }
+    });
+  }
+  playCountDown() {
+    song = new SoundPlayer('countdown.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if(error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+      else {
+        song.play((success) => {
+          if(!success)
+            ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
+        });
+      }
+    });
+  }
+
+
 
   onPressReturn(){
     Actions.home();
   }
+
+  CountDown(){
+    if(this.state.takePicIsNull == 1){
+      return (
+        <CountdownCircle
+            seconds={10}
+            radius={500}
+            borderWidth={10}
+            color="#00000000"
+            bgColor="#00000000"
+            shadowColor="#00000000"
+            textStyle={{ fontSize: 220, color: 'white', marginBottom: '-78%', marginLeft: '1%'}}
+            onTimeElapsed={() => { 
+              this.setState({takePicIsNull: 0});
+              this.playReadyToMail();
+              this.takePic();
+            }}
+        />
+      );
+    }
+    else return null;
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -48,11 +119,11 @@ export default class App extends Component<{}> {
               source={require('../images/menu.png')}
             />
           </TouchableOpacity>
-          
+          {this.CountDown()}
           <TouchableOpacity style= {{marginBottom: "-16%"}} onPress={this.takePictureTimer.bind(this)}>
             <Image
               style={{height: "45%", resizeMode: "contain"}}
-              source={require('../images/cam.png')}
+              source={require('../images/cam2.png')}
             />
           </TouchableOpacity>
         </Camera>
@@ -73,7 +144,8 @@ export default class App extends Component<{}> {
   }
 
   takePictureTimer() {
-    setTimeout(this.takePic.bind(this), 3000);
+    this.playCountDown();
+    this.setState({takePicIsNull: 1})
   }
 
   takePic(){
@@ -105,7 +177,7 @@ export default class App extends Component<{}> {
   handleEmail = () => {
     Mailer.mail({
             subject: '政大展場活動照片來囉～',
-            recipients: ['mtchi@cs.nccu.edu.tw', 'taoyalun@nccu.edu.tw'],
+            recipients: ['jazz89529@gmail.com'],
             //recipients: ['jazz89529@gmail.com', '106753007@mail2.nccu.tw'],
             body: '<b>這是您參加政大活動的照片喔！</b>',
             isHTML: true,

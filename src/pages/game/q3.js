@@ -19,10 +19,11 @@ import {Actions} from 'react-native-router-flux';
 import SoundPlayer from 'react-native-sound';
 
 var song = null;
-
+let scorePara;
 export default class App extends Component<{}> {
   componentWillMount(){
     this.onPressButtonPlay();
+    scorePara = this.props.ans
   }
 
   onPressButtonPlay() {
@@ -43,15 +44,16 @@ export default class App extends Component<{}> {
   }
 
   ans1(){
-    Actions.a3();
+    Actions.a3({ans: scorePara});
   }
 
   ans2(){
-    Actions.a3();
+    Actions.a3({ans: scorePara});
   }
 
   ans3(){
-    Actions.a3();
+    scorePara += 1;
+    Actions.a3({ans: scorePara});
   }
 
   render() {

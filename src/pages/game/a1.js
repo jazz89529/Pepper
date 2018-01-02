@@ -21,6 +21,10 @@ import SoundPlayer from 'react-native-sound';
 var song = null;
 
 export default class App extends Component<{}> {
+  constructor(props) {
+    super(props);
+  }
+
   componentWillMount(){
     this.onPressButtonPlay();
     setTimeout(this.changePage.bind(this), 4500);
@@ -41,7 +45,7 @@ export default class App extends Component<{}> {
 
   changePage(){
     if(Actions.currentScene=='a1')
-      Actions.q2();
+      Actions.q2({ans: this.props.ans});
   }
 
   backHome(){

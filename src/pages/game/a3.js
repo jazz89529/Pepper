@@ -41,7 +41,7 @@ export default class App extends Component<{}> {
 
   changePage(){
     if(Actions.currentScene=='a3')
-      Actions.q4();
+      Actions.q4({ans: this.props.ans});
   }
 
   backHome(){

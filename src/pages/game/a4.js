@@ -40,8 +40,19 @@ export default class App extends Component<{}> {
   }
 
   changePage(){
-    if(Actions.currentScene=='a4')
-      Actions.score();
+    if(Actions.currentScene=='a4'){
+      if(this.props.ans==0)
+        Actions.score0({ans: this.props.ans});
+      if(this.props.ans==1)
+        Actions.score1({ans: this.props.ans});
+      if(this.props.ans==2)
+        Actions.score2({ans: this.props.ans});
+      if(this.props.ans==3)
+        Actions.score3({ans: this.props.ans});
+      if(this.props.ans==4)
+        Actions.score4({ans: this.props.ans});
+
+    }
   }
 
   backHome(){
