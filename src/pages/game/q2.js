@@ -48,25 +48,28 @@ export default class App extends Component<{}> {
   }
 
   ans1(){
+    song.release();
     Actions.a2({ans: scorePara});
   }
 
   ans2(){
+    song.release();
     Actions.a2({ans: scorePara});
   }
 
   ans3(){
     scorePara += 1;
+    song.release();
     Actions.a2({ans: scorePara});
   }
 
   render() {
     return (
       <View style={ styles.container }>
-        <ImageBackground style = {{width: '100%',height: "100%", justifyContent: 'center', alignItems: 'center'}} source={require('../../images/background2.png')}>
-          <Text style={{fontSize: 30, marginTop: '10%', color: 'black', marginLeft: "6%"}}>請問政治大學第一位校長是誰？
+        <ImageBackground style = {{width: '106%',height: "101%", marginLeft: "6%", marginTop: "-2%", justifyContent: 'center', alignItems: 'center'}} source={require('../../images/background2.png')}>
+          <Text style={{fontSize: 60, marginTop: '10%', color: 'black'}}>請問政治大學第一位校長是誰？
           </Text>
-          <View style={{ width: "40%", flexDirection: 'row', marginTop: "10%", marginLeft: "-30%"}}>
+          <View style={{ width: "40%", flexDirection: 'row', marginTop: "10%", marginLeft: "-35%"}}>
             <View style={{flexDirection: 'column', width: "60%", alignItems: 'center'}}>
               <TouchableOpacity style= {styles.button} onPress={this.ans1}>
                 <Text style={styles.ans}>周行一
@@ -129,21 +132,22 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'rgb(30, 177, 237)',
-    padding: 35,
-    paddingTop: 25,
-    paddingBottom: 25,
+    width: "85%",
+    paddingTop: 40,
+    paddingBottom: 40,
     marginLeft: "5%",
-    marginTop: "-15%"
+    marginTop: "-13%"
   },
   ans: {
     color: 'white',
-    fontSize: 19
+    fontSize: 30
   },
   image: {
     height: "50%",
     resizeMode: 'contain', 
     marginBottom: "-20%",
-    marginTop: "5%"
+    marginTop: "9%",
+    marginLeft: "6%"
 
   }
 

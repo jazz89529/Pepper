@@ -1,4 +1,4 @@
-#Tue Jan 02 19:45:09 CST 2018
+#Mon Jan 08 11:05:47 CST 2018
 base.0=/Users/david/pepper/pepper2/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
 file.0=/Users/david/pepper/pepper2/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

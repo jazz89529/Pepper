@@ -44,25 +44,28 @@ export default class App extends Component<{}> {
   }
 
   ans1(){
+    song.release();
     Actions.a4({ans: scorePara});
   }
 
   ans2(){
+    song.release();
     Actions.a4({ans: scorePara});
   }
 
   ans3(){
     scorePara += 1;
+    song.release();
     Actions.a4({ans: scorePara});
   }
 
   render() {
     return (
       <View style={ styles.container }>
-        <ImageBackground style = {{width: '100%',height: "100%", justifyContent: 'center', alignItems: 'center'}} source={require('../../images/background2.png')}>
-          <Text style={{fontSize: 28, marginTop: '10%', color: 'black', marginLeft: "6%"}}>請問下列何者不是政大附近難得的美食？
+        <ImageBackground style = {{width: '106%',height: "101%", marginLeft: "6%", marginTop: "-2%", justifyContent: 'center', alignItems: 'center'}} source={require('../../images/background2.png')}>
+          <Text style={{fontSize: 50, marginTop: '10%', color: 'black', marginLeft: "-3%"}}>請問下列何者不是政大附近難得的美食？
           </Text>
-          <View style={{ width: "40%", flexDirection: 'row', marginTop: "10%", marginLeft: "-30%"}}>
+          <View style={{ width: "40%", flexDirection: 'row', marginTop: "10%", marginLeft: "-37%"}}>
             <View style={{flexDirection: 'column', width: "60%", alignItems: 'center'}}>
               <TouchableOpacity style= {styles.button} onPress={this.ans1}>
                 <Text style={styles.ans}>麥當勞
@@ -126,23 +129,21 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: 'rgb(30, 177, 237)',
     width: "85%",
-    paddingTop: 25,
-    paddingBottom: 25,
+    paddingTop: 40,
+    paddingBottom: 40,
     marginLeft: "5%",
     marginTop: "-15%",
-
   },
   ans: {
     color: 'white',
-    fontSize: 19
+    fontSize: 30
   },
   image: {
-    height: "50%",
+    height: "45%",
     resizeMode: 'contain', 
     marginBottom: "-20%",
     marginTop: "5%",
     marginLeft: "5%"
-
   }
 
 });

@@ -46,24 +46,27 @@ export default class App extends Component<{}> {
   }
 
   ans1(){
+    song.release();
     Actions.a1({ans: 1});
   }
 
   ans2(){
+    song.release();
     Actions.a1({ans: 0});
   }
 
   ans3(){
+    song.release();
     Actions.a1({ans: 0});
   }
 
   render() {
     return (
       <View style={ styles.container }>
-        <ImageBackground style = {{width: '100%',height: "100%", justifyContent: 'center', alignItems: 'center'}} source={require('../../images/background2.png')}>
-          <Text style={{fontSize: 30, marginTop: '-10%', color: 'black'}}>請問國立政治大學的前身是？
+        <ImageBackground style = {{width: '106%',height: "101%", marginLeft: "6%", marginTop: "-2%", justifyContent: 'center', alignItems: 'center'}} source={require('../../images/background2.png')}>
+          <Text style={{fontSize: 60, marginTop: '-10%', color: 'black'}}>請問國立政治大學的前身是？
           </Text>
-          <View style={{ width: "40%", flexDirection: 'row', marginLeft: "-64%", marginTop: "10%"}}>
+          <View style={{ width: "40%", flexDirection: 'row', marginLeft: "-57%", marginTop: "8%"}}>
             <TouchableOpacity style= {styles.button} onPress={this.ans1}>
               <Text style={styles.ans}>中央政治學校
               </Text>
@@ -106,14 +109,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'rgb(30, 177, 237)',
-    padding: 23,
-    paddingTop: 18,
-    paddingBottom: 18,
+    padding: 32,
+    paddingTop: 55,
+    paddingBottom: 55,
     marginLeft: "15%"
   },
   ans: {
     color: 'white',
-    fontSize: 19
+    fontSize: 30
   }
 
 });

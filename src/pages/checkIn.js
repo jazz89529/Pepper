@@ -16,10 +16,25 @@ import {
   ImageBackground
 } from 'react-native';
 import {Actions} from 'react-native-router-flux';
+import SoundPlayer from 'react-native-sound';
+var song = null;
 
 export default class App extends Component<{}> {
+  constructor(props) {
+    super(props);
+  }
   componentWillMount(){
-    setTimeout(this.changePage.bind(this), 3000);
+    song = new SoundPlayer('qrcode.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+      if(error)
+        ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
+      else {
+        song.play((success) => {
+          if(!success)
+            ToastAndroid.show('Error when play SoundPlayer :(((', ToastAndroid.SHORT);
+        });
+      }
+    });
+    setTimeout(this.changePage.bind(this), 6500);
   }
 
   changePage(){
@@ -29,7 +44,7 @@ export default class App extends Component<{}> {
   render() {
     return (
       <View style={ styles.container }>
-        <Image style = {{width: '100%', height: '100%', resizeMode: 'contain'}} source={require('../images/qrcodeGif.gif')} />
+        <Image style = {{width: '115%', height: '1125%', resizeMode: 'contain'}} source={require('../images/qrcode.gif')} />
       </View>
     );
   }

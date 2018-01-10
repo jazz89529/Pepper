@@ -23,11 +23,11 @@ let scorePara;
 export default class App extends Component<{}> {
   componentWillMount(){
     this.onPressButtonPlay();
-    setTimeout(this.changePage.bind(this), 11000);
+    setTimeout(this.changePage.bind(this), 9500);
   }
 
   onPressButtonPlay() {
-    song = new SoundPlayer('right3.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
+    song = new SoundPlayer('score3.mp3', SoundPlayer.MAIN_BUNDLE, (error) => {
       if(error)
         ToastAndroid.show('Error when init SoundPlayer :(((', ToastAndroid.SHORT);
       else {
@@ -40,35 +40,26 @@ export default class App extends Component<{}> {
   }
 
   changePage(){
+    song.release();
     Actions.home();
   }
 
   backHome(){
+    song.release();
     Actions.home();
   }
 
   render() {
     return (
       <View style={ styles.container }>
-        <ImageBackground style = {{width: '100%',height: "100%", justifyContent: 'center', alignItems: 'center'}} source={require('../../images/background2.png')}>
-          <TouchableOpacity style= {{marginTop: "-1%", marginLeft: "82%"}} onPress={this.backHome}>
+         <ImageBackground style = {{width: '106%',height: "101%", marginLeft: "0%", marginTop: "-2%", justifyContent: 'center', alignItems: 'center'}} source={require('../../images/score3.png')}>
+          <TouchableOpacity style= {{marginTop: "-39%", marginLeft: "80%"}} onPress={this.backHome}>
             <Image
               style={{height: "30%", resizeMode: "contain"}}
               source={require('../../images/menu.png')}
             />
           </TouchableOpacity>
-          <Text style={{fontSize: 30, color: 'black', marginLeft: "-50%", marginTop: "-8%"}}>恭喜您答對：
-          </Text>
-          <View style={{flexDirection: 'row', marginLeft: "35%", marginTop: "3%"}}>
-            <Text style={styles.ans}>3
-            </Text>
-            <Text style={{color: 'black', fontSize: 50, marginTop: "28%", marginRight: "-70%"}}>題
-            </Text>
-            <Image
-              style={{height: "37%", resizeMode: "contain", marginTop: "10%"}}
-              source={require('../../images/star.png')}
-            />
-          </View>
+          
         </ImageBackground>
 
       </View>
@@ -105,9 +96,9 @@ const styles = StyleSheet.create({
   },
   ans: {
     color: 'black',
-    fontSize: 210,
-    marginTop: "-17%",
-    marginLeft: "30%"
+    fontSize: 300,
+    marginTop: "-15%",
+    marginLeft: "15%"
   }
 
 });

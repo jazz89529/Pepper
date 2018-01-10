@@ -19,22 +19,20 @@ import {Actions} from 'react-native-router-flux';
 import YouTube from 'react-native-youtube';
 
 export default class App extends Component<{}> {
+  constructor(props) {
+    super(props);
+    this.state = {youtubeActive: true};
+  }
 
   backHome(){
+    this.setState({youtubeActive: false});
     Actions.home();
   }
 
-  render() {
-    return (
-      <View style={ styles.container }>
-        <ImageBackground style = {{width: '100%',height: "100%", justifyContent: 'center', alignItems: 'center'}} source={require('../images/background2.png')}>
-          <TouchableOpacity style= {{marginTop: "-1%", marginLeft: "78%"}} onPress={this.backHome}>
-              <Image
-                style={{height: "33%", resizeMode: "contain"}}
-                source={require('../images/menu.png')}
-              />
-            </TouchableOpacity>
-          <YouTube
+  renderYoutube(){
+    if(this.state.youtubeActive == true){
+      return(
+        <YouTube
             apiKey="AIzaSyAHFMbR5zaJ_E-CymYl-QFRrjPKuPCzpr8"
             videoId="vj_1DQxP2Gs"   // The YouTube video ID
             play={true}             // control playback of video with true/false
@@ -46,8 +44,23 @@ export default class App extends Component<{}> {
             onChangeQuality={e => this.setState({ quality: e.quality })}
             onError={e => this.setState({ error: e.error })}
 
-            style={{ width: '90%', height: "83%", marginTop: "-12%" }}
+            style={{ width: '90%', height: "83%", marginTop: "-15%", marginLeft: "-6%" }}
           />
+      )
+    }
+  }
+
+  render() {
+    return (
+      <View style={ styles.container }>
+        <ImageBackground style = {{width: '106%',height: "101%", justifyContent: 'center', alignItems: 'center', marginLeft: "6%", marginTop: "-2%"}} source={require('../images/background2.png')}>
+          <TouchableOpacity style= {{marginTop: "0%", marginLeft: "75%"}} onPress={this.backHome.bind(this)}>
+              <Image
+                style={{height: "33%", resizeMode: "contain"}}
+                source={require('../images/menu.png')}
+              />
+            </TouchableOpacity>
+          {this.renderYoutube()}
         </ImageBackground>
 
       </View>

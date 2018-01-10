@@ -40,25 +40,28 @@ export default class App extends Component<{}> {
   }
 
   changePage(){
-    if(Actions.currentScene=='wel')
+    if(Actions.currentScene=='wel'){
+      song.release();
       Actions.q1();
+    }
   }
 
   backHome(){
+    song.release();
     Actions.home();
   }
   render() {
     return (
       <View style={ styles.container }>
-        <ImageBackground style = {{width: '100%',height: "100%"}} source={require('../../images/background2.png')}>
-          <TouchableOpacity style= {{alignItems: 'flex-end'}} onPress={this.backHome}>
+        <ImageBackground style = {{width: '106%',height: "101%", marginLeft: "6%", marginTop: "-2%"}} source={require('../../images/background2.png')}>
+          <TouchableOpacity style= {{marginLeft: "81%"}} onPress={this.backHome}>
             <Image
               style={{height: "33%", resizeMode: "contain"}}
               source={require('../../images/menu.png')}
             />
           </TouchableOpacity>
           <View style={{marginTop: '6%', alignItems: 'center'}}>
-            <Text style={{fontSize: 40, color: 'black'}}>歡迎來到校史快問快答</Text>
+            <Text style={{fontSize: 80, color: 'black', marginLeft: "-5%"}}>歡迎來到校史快問快答</Text>
           </View>
         </ImageBackground>
 

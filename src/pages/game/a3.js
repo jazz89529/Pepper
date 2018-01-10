@@ -40,25 +40,28 @@ export default class App extends Component<{}> {
   }
 
   changePage(){
-    if(Actions.currentScene=='a3')
+    if(Actions.currentScene=='a3'){
+      song.release();
       Actions.q4({ans: this.props.ans});
+    }
   }
 
   backHome(){
+    song.release();
     Actions.home();
   }
 
   render() {
     return (
       <View style={ styles.container }>
-        <ImageBackground style = {{width: '100%',height: "100%", justifyContent: 'center', alignItems: 'center'}} source={require('../../images/background2.png')}>
-          <TouchableOpacity style= {{marginTop: "0%", marginLeft: "80%"}} onPress={this.backHome}>
+        <ImageBackground style = {{width: '106%',height: "101%", marginLeft: "6%", marginTop: "-2%", justifyContent: 'center', alignItems: 'center'}} source={require('../../images/background2.png')}>
+          <TouchableOpacity style= {{marginTop: "-2%", marginLeft: "75%"}} onPress={this.backHome}>
             <Image
               style={{height: "32%", resizeMode: "contain"}}
               source={require('../../images/menu.png')}
             />
           </TouchableOpacity>
-          <Text style={{fontSize: 30, color: 'black', marginLeft: "-42%", marginTop: "-7%"}}>答案是：
+          <Text style={{fontSize: 60, color: 'black', marginLeft: "-42%", marginTop: "-7%"}}>答案是：
           </Text>
           <View style={{ width: "35%", marginTop: "3%", marginLeft: "-5%"}}>
             <View style={{ flexDirection: "row", height: "40%", justifyContent: 'center'}}>
@@ -68,11 +71,11 @@ export default class App extends Component<{}> {
               </TouchableOpacity>
               <Image
                 source={require('../../images/four.png')}
-                style={{width: "60%", resizeMode: "contain", marginTop: "-37%", marginLeft: "10%"}}
+                style={{width: "55%", resizeMode: "contain", marginTop: "-12%", marginLeft: "10%"}}
               />
             </View>
 
-            <Text style={{marginLeft: "28%", marginTop: "25%", color: 'black', fontSize: 22}}>你答對了嗎？
+            <Text style={{marginLeft: "28%", marginTop: "25%", color: 'black', fontSize: 40}}>你答對了嗎？
             </Text>
           </View>
         </ImageBackground>
@@ -104,14 +107,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'rgb(30, 177, 237)',
-    padding: 50,
-    paddingTop: 53,
-    paddingBottom: 53,
+    padding: 68,
+    paddingTop: 40,
+    paddingBottom: 73,
     marginLeft: "15%"
   },
   ans: {
     color: 'white',
-    fontSize: 21,
+    fontSize: 33,
     marginTop: "40%"
   }
 

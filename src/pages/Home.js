@@ -28,7 +28,7 @@ export default class App extends Component<{}> {
   }
 
   onPress3 = () => {
-    Actions.camera();
+    Actions.camera({cameraActive: 1});
   }
 
   onPress4 = () => {
@@ -38,10 +38,10 @@ export default class App extends Component<{}> {
   render() {
     return (
       <View style={ styles.container }>
-        <ImageBackground style={{width: "100%", marginTop: "0%", height: "100%", justifyContent: 'flex-start'}} 
+        <ImageBackground style={{width: "106%", marginLeft: "6%", height: "101%", justifyContent: 'center',marginTop: "-2%"}} 
             source={require('../images/background2.png')}>
-          <View style={{marginLeft: "17%", marginBottom: "10%"}}>
-            <View style={{flexDirection: 'row', marginBottom: "-28%", marginTop: '3%'}}>
+          <View style={{marginLeft: "8%", marginBottom: "5%", marginTop: "5%"}}>
+            <View style={{flexDirection: 'row', marginBottom: "-38%", marginTop: '3%'}}>
               <TouchableOpacity style={{width: "42%", height: "66%"}} onPress={this.onPress1}>
                 <Image
                   style={{width: "100%", height: "100%", resizeMode: 'contain'}}
